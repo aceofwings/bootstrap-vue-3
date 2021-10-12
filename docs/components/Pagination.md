@@ -257,3 +257,5 @@ by setting the prop `align` to the appropriate value.
 ### `<b-pagination>`
 
 #### Properties
+
+<ComponentReference></ComponentReference>
