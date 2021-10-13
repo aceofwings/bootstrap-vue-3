@@ -19,7 +19,7 @@ export default defineComponent({
   render() {
     const $anchor = h('b-link', {
       'class': 'anchorjs-link',
-      'props': {to: {hash: `#${this.id}`}},
+      'to': {hash: `#${this.id}`},
       'aria-labelledby': this.id || null,
       'aria-label': this.id ? null : 'Anchor',
     })

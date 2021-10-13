@@ -1,11 +1,12 @@
-import {App, inject, ComputedRef, computed, reactive} from 'vue'
+/* eslint-disable @typescript-eslint/explicit-module-boundary-types */
+import {computed, ComputedRef} from 'vue'
 
 import Alignment from '../types/Alignment'
 
 function alignment(props: any): ComputedRef<string> {
-  const {align}: {align: Alignment.Horizontal} = props
+  const {align}: {align: Alignment} = props
   return computed(() => {
-    if (align == 'center') {
+    if (align === 'center') {
       return 'justify-content-center'
     } else if (align === 'end') {
       return 'justify-content-end'

@@ -42,10 +42,11 @@
 import * as Popper from '@popperjs/core'
 import {Dropdown} from 'bootstrap'
 import {ComponentPublicInstance, computed, defineComponent, onMounted, PropType, ref} from 'vue'
-import {ButtonVariant, Size} from '../types'
-import mergeDeep from '../utils/mergeDeep'
-import useId from '../composables/useId'
-import useEventListener from '../composables/useEventListener'
+import {ButtonVariant, Size} from '../../types'
+import mergeDeep from '../../utils/mergeDeep'
+import useId from '../../composables/useId'
+import useEventListener from '../../composables/useEventListener'
+import {HTMLElement} from '../../types/safe-types'
 
 export default defineComponent({
   name: 'BDropdown',
@@ -118,6 +119,10 @@ export default defineComponent({
       ref: props.split ? dropdown : null,
     }))
 
+    const hide = () => {
+      instance.value?.hide()
+    }
+
     onMounted(() => {
       instance.value = new Dropdown(
         dropdown.value?.$el,
@@ -165,6 +170,7 @@ export default defineComponent({
       splitAttr,
       dropdownMenuClasses,
       dropdown,
+      hide,
     }
   },
 })
