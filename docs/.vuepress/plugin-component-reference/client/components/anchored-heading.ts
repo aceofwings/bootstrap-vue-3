@@ -1,5 +1,6 @@
 import {computed, defineComponent, h, ref, toRefs} from 'vue'
-export default {
+
+export default defineComponent({
   name: 'BVAnchoredHeading',
   functional: true,
   props: {
@@ -12,18 +13,18 @@ export default {
       default: 2,
     },
   },
+  setup(props) {
+    return {}
+  },
   render() {
     const $anchor = h('b-link', {
-      staticClass: 'anchorjs-link',
-      props: {to: {hash: `#${this.id}`}},
-      attrs: {
-        'aria-labelledby': this.id || null,
-        'aria-label': this.id ? null : 'Anchor',
-      },
+      'class': 'anchorjs-link',
+      'props': {to: {hash: `#${this.id}`}},
+      'aria-labelledby': this.id || null,
+      'aria-label': this.id ? null : 'Anchor',
     })
 
-    const $content = h('span', {staticClass: 'bd-content-title'}, [$anchor]) // [children, $anchor])
-
+    const $content = h('span', {class: ['bd-content-title']}, [this.$slots.default(), $anchor])
     return h(
       `h${this.level}`,
       {
@@ -33,4 +34,4 @@ export default {
       $content
     )
   },
-}
+})

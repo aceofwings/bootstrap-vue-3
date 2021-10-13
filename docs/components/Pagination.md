@@ -252,10 +252,4 @@ by setting the prop `align` to the appropriate value.
     const paginationRows = ref(40)
 </script>
 
-## Component reference
-
-### `<b-pagination>`
-
-#### Properties
-
 <ComponentReference></ComponentReference>

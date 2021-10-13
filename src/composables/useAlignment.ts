@@ -4,7 +4,6 @@ import Alignment from '../types/Alignment'
 
 function alignment(props: any): ComputedRef<string> {
   const {align}: {align: Alignment.Horizontal} = props
-  console.log(props)
   return computed(() => {
     if (align == 'center') {
       return 'justify-content-center'
