@@ -1,5 +1,5 @@
 import {defineUserConfig} from 'vuepress'
-import ComponentReference from './plugin-component-reference'
+import {componentReference} from './plugin-component-reference'
 import type {DefaultThemeOptions} from 'vuepress'
 
 export default defineUserConfig<DefaultThemeOptions>({
@@ -8,7 +8,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   title: 'BootstrapVue 3',
   head: [['link', {rel: 'icon', href: '/bootstrap-vue-3/favicon.ico'}]],
 
-  plugins: [ComponentReference],
+  plugins: [componentReference],
   themeConfig: {
     logo: '/logo.png',
     repo: 'https://github.com/cdmoro/bootstrap-vue-3',
