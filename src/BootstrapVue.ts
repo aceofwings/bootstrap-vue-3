@@ -9,7 +9,7 @@ import './styles/styles.scss'
 // import available components
 export {default as BAccordion} from './components/BAccordion.vue'
 export {default as BAccordionItem} from './components/BAccordionItem.vue'
-export {default as BAlert} from './components/BAlert.vue'
+export {default as BAlert} from './components/BAlert/BAlert.vue'
 export {default as BAvatar} from './components/BAvatar/BAvatar.vue'
 export {default as BAvatarGroup} from './components/BAvatar/BAvatarGroup.vue'
 export {default as BBadge} from './components/BBadge/BBadge.vue'
